@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./Home.css";
-import { Grid } from "@mui/material";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import Intro from "./Pages/Intro";
 import Experience from "./Pages/Experience";
@@ -8,17 +8,17 @@ import Projects from "./Pages/Projects";
 
 function Home() {
   return (
-    <Grid container flexDirection="column" alignText="center" spacing={8}>
-      <Grid item>
+    <Parallax pages={3} style={{ top: "0", left: "0" }}>
+      <ParallaxLayer offset={0} speed={2.5}>
         <Intro />
-      </Grid>
-      <Grid item>
+      </ParallaxLayer>
+      <ParallaxLayer offset={1} speed={2.5}>
         <Experience />
-      </Grid>
-      <Grid item>
+      </ParallaxLayer>
+      <ParallaxLayer offset={2} speed={2.5}>
         <Projects />
-      </Grid>
-    </Grid>
+      </ParallaxLayer>
+    </Parallax>
   );
 }
 
