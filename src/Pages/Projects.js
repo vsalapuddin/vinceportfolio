@@ -1,6 +1,7 @@
 import * as React from "react";
 import {
   Box,
+  Grid,
   Typography,
   Card,
   CardContent,
@@ -12,8 +13,10 @@ function Projects() {
   return (
     <Box>
       <Typography variant="h2">Projects</Typography>
-      <Card>{project}</Card>
-      <Card>{project}</Card>
+      <Grid container>
+        <Card>{project}</Card>
+        <Card>{project}</Card>
+      </Grid>
     </Box>
   );
 }
@@ -24,7 +27,6 @@ const project = (
       <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
         Project
       </Typography>
-      <Typography variant="body2">well meaning and kindly.</Typography>
     </CardContent>
     <CardActions>
       <Button size="small">Learn More</Button>
